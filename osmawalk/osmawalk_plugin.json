@@ -1,0 +1,9 @@
+{
+    "Keys": ["osmawalk"],
+    "Provider": "osmawalk",
+    "Version": 1,
+    "Experimental": true,
+    "Features": [
+        "OnlineRoutingFeature"
+    ]
+}
