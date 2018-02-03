@@ -22,6 +22,7 @@ private Q_SLOTS:
     void replyError(QGeoRouteReply::Error errorCode, const QString &errorString);
 
 private:
+    QUrl composeRequest(QGeoCoordinate from, QGeoCoordinate to);
     QNetworkAccessManager * m_networkManager;
     QString m_urlPrefix;
 };

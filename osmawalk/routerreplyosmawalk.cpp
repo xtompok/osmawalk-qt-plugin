@@ -18,6 +18,17 @@ RouterReplyOsmawalk::~RouterReplyOsmawalk()
 
 void RouterReplyOsmawalk::networkReplyFinished()
 {
+    QNetworkReply * reply = static_cast<QNetworkReply *>(sender());
+    reply->deleteLater();
+
+    if (reply->error() != QNetworkReply::NoError)
+    {
+        return;
+    }
+
+    QList<QGeoRoute> routes;
+    QString errorString;
+
 
     //TODO parse response
 }
